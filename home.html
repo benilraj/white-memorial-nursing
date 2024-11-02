@@ -19,7 +19,7 @@
             body {
                 font-family: "Poppins" sans-serif;
             }
-            #menu > h4 {
+            #menu  h4 {
                 display: inline;
                 padding-left: 15px;
                 padding-right: 15px;
@@ -27,9 +27,12 @@
                 padding-top: 30px;
                 padding-bottom: 30px;
             }
-            #menu > h4:hover {
+            #menu  h4:hover {
                 cursor: pointer;
                 background-color: #b9a87d;
+            }
+            #menu a {
+                text-decoration: none;
             }
 
             #main {
@@ -45,7 +48,13 @@
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center top;
-                height:500px;
+            }
+
+            #contact {
+                background-image: url("./images/home/bg.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center top;
             }
 
             .section-padding {
@@ -66,6 +75,82 @@
 
             .card :hover {
                 cursor:pointer;
+            }
+
+            /* The actual timeline (the vertical ruler) */
+            .timeline {
+              position: relative;
+              max-width: 1200px;
+              margin: 0 auto;
+            }
+
+            /* The actual timeline (the vertical ruler) */
+            .timeline::after {
+              content: '';
+              position: absolute;
+              width: 1px;
+              background-color: white;
+              top: 0;
+              bottom: 0;
+              margin-left: -3px;
+            }
+
+            /* Container around content */
+            .container {
+              padding: 10px 40px;
+              position: relative;
+              background-color: inherit;
+              width: 50%;
+            }
+
+            /* The circles on the timeline */
+            .container::after {
+              content: '';
+              position: absolute;
+              width: 25px;
+              height: 25px;
+              right: -17px;
+              background-color: white;
+              top: 15px;
+              border-radius: 50%;
+              z-index: 1;
+            }
+
+
+            /* Add arrows to the right container (pointing left) */
+            .right::before {
+              content: " ";
+              height: 0;
+              position: absolute;
+              top: 22px;
+              width: 0;
+              z-index: 1;
+              left: 30px;
+              border-width: 10px 10px 10px 0;
+              border-color: transparent white transparent transparent;
+            }
+            /* Fix the circle for containers on the right side */
+            .right::after {
+              left: -16px;
+            }
+
+            /* The actual content */
+            .content {
+              padding: 20px 30px;
+              position: relative;
+              border-radius: 1px;
+              color:white;
+              font-size:12px;
+            }
+
+
+            .address > div {
+                padding-top:15px;
+                color:white;
+            }
+
+            #address_icons > div {
+                padding-top:12px;
             }
 
         </style>
@@ -96,8 +181,8 @@
                 </div>
                 <div class="w3-container w3-cell w3-center">
                     <div id="menu" style="padding-top: 35px">
-                        <h4>Home</h4>
-                        <h4>Courses</h4>
+                        <a href="#main"><h4>Home</h4></a>
+                        <a href="#courses"><h4>Courses</h4></a>
                         <h4>Hospital</h4>
                         <h4>Gallery</h4>
                         <h4>About Us</h4>
@@ -178,7 +263,7 @@
             </div>
 
             <!-- Courses Offered -->
-            <div class="w3-container section-padding" >
+            <div class="w3-container section-padding"  id="courses" >
                 <h1 class="w3-xxlarge"><b style="border-bottom:3px solid black">COURSES OFFERED ?</b></h1>
 
                 <div class="w3-container w3-row-cell" >
@@ -245,9 +330,114 @@
             </div>
 
             <!--events and news -->
-            <div class="w3-container">
-                <div id="events">
-                    <h1 style="color:#b9a87d">EVENTS AND NEWS</h1>
+            <div id="events" class="w3-container section-padding" >
+                <h1 class="w3-xxlarge"><b style="color:#b9a87d">EVENTS & NEWS</b></h1>
+                <div class=" section-padding">
+                    <div class="timeline">
+                      <div class="container right">
+                        <div class="content">
+                          <h2>2024</h2>
+                          <p>Dr. K. Rajendran, M.D (Hom) was the founder of the White Memorial Educational Institutions such as Homeo Medical College, College of Physiotherapy, College of Education, College of Nursing, School of Nursing, Matriculation School and White Mission Hospital. He was the Chairman of the White Memorial Educational Institutions and also the Principal of the White Memorial Homoeo Medical College, Attoor. These Institutions are run under the White Memorial Educational Society, Attoor.</p>
+                        </div>
+                      </div>
+                      <div class="container right">
+                        <div class="content">
+                          <h2>2023</h2>
+                          <p>Dr. K. Rajendran, M.D (Hom) was the founder of the White Memorial Educational Institutions such as Homeo Medical College, College of Physiotherapy, College of Education, College of Nursing, School of Nursing, Matriculation School and White Mission Hospital. He was the Chairman of the White Memorial Educational Institutions and also the Principal of the White Memorial Homoeo Medical College, Attoor. These Institutions are run under the White Memorial Educational Society, Attoor.</p>
+                        </div>
+                      </div>
+                      <div class="container right">
+                        <div class="content">
+                          <h2>2022</h2>
+                          <p>Dr. K. Rajendran, M.D (Hom) was the founder of the White Memorial Educational Institutions such as Homeo Medical College, College of Physiotherapy, College of Education, College of Nursing, School of Nursing, Matriculation School and White Mission Hospital. He was the Chairman of the White Memorial Educational Institutions and also the Principal of the White Memorial Homoeo Medical College, Attoor. These Institutions are run under the White Memorial Educational Society, Attoor.</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery -->
+            <h1>This is test</h1>
+
+
+            <div id="contact" class="w3-container section-padding w3-padding-48" >
+                <div class="w3-container w3-row-cell" >
+                    <div class="w3-container w3-cell">
+                        <h4 style="color:#b9a87d">CONTACT US</h4>
+                        <div class="address">
+                            <div>Attoor, Veeyanoor Post, Kanyakumari Dist, Tamil Nadu</div>
+                            <div>Tel: 04651-282292, 282282, College: 295399, Res: 282291</div>
+                            <div>Tamilnadu: 94420 10093, 94431 20292 Kerala: 9495152066</div>
+                            <div>email: wmel1974@gmail.com</div>
+                            <div>info@whitememorialcolleges</div>
+                            <div>whitememorialcolleges.com</div>
+                        </div>
+                    </div>
+                    <div id="address_icons" class="w3-container w3-cell">
+                        <h4 style="color:#b9a87d">&nbsp;</h4>
+                        <div>
+                            <img
+                                src="./images/home/location.png"
+                                width="25px" height="25px"
+                                alt="Location"
+                                />
+                        </div>
+                        <div>
+                            <img
+                                src="./images/home/mobile.png"
+                                width="25px" height="25px"
+                                alt="Mobile"
+                                />
+                        </div>
+                        <div>
+                            <img
+                                src="./images/home/phone.png"
+                                width="25px" height="25px"
+                                alt="Phone"
+                                />
+                        </div>
+                        <div>
+                            <img
+                                src="./images/home/email.png"
+                                width="25px" height="25px"
+                                alt="Email"
+                                />
+                        </div>
+                        <div style="width:25px;height:25px" ></div>
+                        <div>
+                            <img
+                                src="./images/home/search.png"
+                                width="25px" height="25px"
+                                alt="Search"
+                                />
+                        </div>
+                    </div>
+                    <div class="w3-container w3-cell">
+                        <h4 style="color:#b9a87d">HOME</h4>
+                        <div class="address">
+                            <div>Chairman Message</div>
+                            <div>Founders Message</div>
+                            <div>Our Mission</div>
+                            <div>Our Vision</div>
+                            <div>Hostel Facility</div>
+                            <div>Bus Facilities</div>
+                        </div>
+                    </div>
+                    <div class="w3-container w3-cell">
+                        <h4 style="color:#b9a87d">COURSES OFFERED</h4>
+                        <div class="address">
+                            <div>B.Sc Nursing</div>
+                            <div>P.B.B.Sc Nursing</div>
+                            <div>DGNM</div>
+                        </div>
+                    </div>
+                    <div class="w3-container w3-cell">
+                        <h4 style="color:#b9a87d">HOSPITAL</h4>
+                        <div class="address">
+                            <div>What we provide</div>
+                            <div>What we have</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
