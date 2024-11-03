@@ -133,3 +133,15 @@ body {
     text-decoration: none;
     color: black;
 }
+
+/* course  */
+
+#course_heading {
+    font-size: 35px;
+    font-weight: 500;
+    padding: 20px 10px 20px 20px;
+}
+
+#course_heading > span {
+    border-bottom: 3px solid black;
+}
