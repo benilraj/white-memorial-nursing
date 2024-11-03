@@ -9,6 +9,8 @@
             rel="stylesheet"
             href="https://www.w3schools.com/w3css/4/w3.css"
         />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -153,7 +155,36 @@
                 padding-top:12px;
             }
 
+            .icon {
+              display: none;
+            }
+
+
+            /* @media screen and (max-width: 600px) {
+              #menu {display: none;}
+              #navbar-address {
+                  display: none;
+              }
+              .icon {
+                float: right;
+                display: block;
+                font-size:50px;
+              }
+            } */
+
         </style>
+
+        <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+
     </head>
     <body>
         <div class="w3-content" style="max-width: 100%">
@@ -166,7 +197,7 @@
                     <div class="w3-container w3-cell">
                         <img
                             src="./images/home/logo.png"
-                            style="width: 100%; max-width: 100px"
+                            style="width: 100%; max-width: 100px; min-width:100px;"
                             class="w3-round w3-image"
                             alt="Logo"
                         />
@@ -176,7 +207,7 @@
                         <h1 class="w3-xlarge">
                             WHITE MEMORIAL COLLEGE OF NURSING
                         </h1>
-                        <h1 class="w3-large">Attoor, Veeyanoor Po - 629177</h1>
+                        <h1 id="navbar-address" class="w3-large">Attoor, Veeyanoor Po - 629177</h1>
                     </div>
                 </div>
                 <div class="w3-container w3-cell w3-center">
@@ -188,6 +219,14 @@
                         <h4>About Us</h4>
                     </div>
                 </div>
+
+                <div class="w3-container" >
+                <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                <a href="javascript:void(0);" style="padding-top: 35px" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars"></i>
+                </a>
+                </div>
+
             </header>
             <!-- Main -->
             <header id="main" class="w3-container section-padding ">
