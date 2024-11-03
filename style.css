@@ -45,6 +45,31 @@ body {
     align-items: center;
 }
 
+#nav_bar > i {
+    padding: 0px 3px 0px 3px;
+    font-size: 50px;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    #nav_bar > a {
+        display: none;
+    }
+    #nav_bar > i {
+        display: inline;
+    }
+
+    #header #clg_name {
+        font-size: 25px;
+    }
+
+    #header #clg_addr {
+        font-size: 10px;
+    }
+}
+
 #nav_bar > a {
     text-decoration: none;
     color: white;
@@ -69,6 +94,13 @@ body {
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: 900px;
+}
+
+@media screen and (max-width: 600px) {
+    #main {
+        background-image: none;
+        background-color: #e7e7e7;
+    }
 }
 
 #clg_info {
@@ -105,9 +137,16 @@ body {
     margin-top: 80px;
     padding-top: 20px;
     padding-left: 50px;
-    width: 900px;
+    max-width: 900px;
+    width: 100%;
     border-radius: 150px;
     background-color: white;
+}
+
+@media screen and (max-width: 600px) {
+    #mission {
+        border-radius: 0px;
+    }
 }
 
 #mission > p {
@@ -122,11 +161,26 @@ body {
     padding-bottom: 10px;
 }
 
+@media screen and (max-width: 600px) {
+    #social_media_bar {
+        background-color: white;
+    }
+}
+
 #social_media_bar {
     display: flex;
     align-items: center;
     flex-direction: row;
     gap: 4px;
+}
+
+@media screen and (max-width: 600px) {
+    #social_media_bar {
+        justify-content: space-between;
+    }
+    #social_media_bar > span {
+        display: none;
+    }
 }
 
 #social_media_bar a {
@@ -136,12 +190,189 @@ body {
 
 /* course  */
 
+#courses {
+    padding: 20px 10px 20px 20px;
+}
+
 #course_heading {
     font-size: 35px;
     font-weight: 500;
-    padding: 20px 10px 20px 20px;
 }
 
 #course_heading > span {
     border-bottom: 3px solid black;
+}
+
+.card {
+    box-shadow: 0px 0px 7px 5px rgba(0, 0, 0, 0.49);
+    padding: 50px 50px 50px 50px;
+    margin-bottom: 20px;
+    position: relative;
+    border-bottom: 10px solid black;
+}
+
+.card > span {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.card_container {
+    padding-top: 30px;
+}
+
+.course_name {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.course_title {
+    font-size: small;
+}
+
+#avail_courses {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/* events */
+#events_heading {
+    padding: 20px 10px 20px 20px;
+    font-size: 35px;
+    font-weight: 500;
+    color: #b9a87d;
+}
+
+#events {
+    background-image: url("./images/home/hcworker.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-left: 60px;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* The circles on the timeline */
+.container::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content {
+    position: relative;
+    border-radius: 1px;
+    color: white;
+    font-size: 13px;
+}
+
+/* provide */
+
+#provide {
+    padding: 20px 10px 20px 20px;
+    background-color: #f6f5fa;
+}
+
+#provide_heading {
+    font-size: 35px;
+    font-weight: 500;
+}
+
+#provide_heading > span {
+    border-bottom: 3px solid black;
+}
+
+#main_row {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    #main_row {
+        flex-direction: column;
+    }
+}
+
+.sub_row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px 20px 20px 20px;
+}
+
+.heading {
+    color: #b9a87d;
+    text-align: center;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.pr_img {
+    text-align: center;
+}
+
+.pr_img > img {
+    width: 120px;
+    height: 120px;
+}
+
+#provide_content {
+    background-color: white;
+    border-radius: 15px;
+    margin: 15px 15px 15px 15px;
+}
+
+.desc {
+    font-size: medium;
 }
