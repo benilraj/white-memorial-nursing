@@ -15,6 +15,38 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <link rel="stylesheet" href="./style.css" />
+
+        <script>
+          function toggleNavbar(){
+            var nav = document.getElementById("nav_bar");
+            nav.classList.toggle("show_hide");
+          }
+
+          window.onresize = resizeFn;
+          resizeFn();
+
+          function resizeFn(){
+            var nav = document.getElementById("nav_bar");
+            if( nav !== null){
+              if(window.innerWidth < 992){
+                nav.classList.add("show_hide");
+              } else {
+                nav.classList.remove("show_hide");
+              }
+            }
+          }
+
+          document.addEventListener("DOMContentLoaded", function() {
+            if(window.innerWidth < 992){
+              var nav = document.getElementById("nav_bar");
+              if(nav !== null){
+                nav.classList.add("show_hide");
+              }
+            }
+          });
+
+        </script>
+
     </head>
     <body>
         <div id="main_container">
@@ -27,6 +59,9 @@
                         </div>
                         <div id="clg_addr">Attoor, Veeyanoor Po - 629177</div>
                     </div>
+                    <div id="menu_icon" onclick="toggleNavbar()" >
+                        <i class="fa fa-bars"></i>
+                    </div>
                 </div>
                 <div id="nav_bar">
                     <a href="">Home</a>
@@ -35,7 +70,6 @@
                     <a href="">Gallery</a>
                     <a href="">About&nbsp;us</a>
                     <a href="">Contact&nbsp;us</a>
-                    <i class="fa fa-bars"></i>
                 </div>
             </div>
 
@@ -142,6 +176,49 @@
                 </div>
             </div>
 
+            <div id="gallery">
+                <div id="gallery_heading"><span>Gallery</span></div>
+
+                <div id="gallery_content" >
+                    <div id="gallery_car">
+                        <div id="gall_car_main_img">
+                            <img
+                                src="./images/home/img4.png"
+                                alt="Img4"
+                                />
+                        </div>
+                        <div id="car" style="flex-grow: 5;">
+                            <div id="car_content">
+                                <div id="car_heading" >COLLEGE DAY CELEBRATION</div>
+                                <div id="car_desc" >"We do not remember days; we remember moments."</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="image_bar" >
+                        <div>
+                            <img
+                                src="./images/home/img1.png"
+                                alt="Img1"
+                                />
+                        </div>
+                        <div>
+                            <img
+                                src="./images/home/img2.png"
+                                alt="Img2"
+                                />
+                        </div>
+                        <div>
+                            <img
+                                src="./images/home/img3.png"
+                                alt="Img3"
+                                />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
             <div id="provide">
                 <div id="provide_heading"><span>What we Provide</span></div>
 
@@ -201,7 +278,134 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
+            <div id="contact_us">
+                <div id="contact_container" >
+                    <table>
+                        <tr>
+                            <th>CONTACT US</th>
+                        </tr>
+                        <tr>
+                            <td>Attoor, Veeyanoor Post, Kanyakumari Dist, Tamil Nadu</td>
+                            <td>
+                                <img
+                                    src="./images/home/location.png"
+                                    width="25px" height="25px"
+                                    alt="Location"
+                                    />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tel: 04651-282292, 282282, College: 295399, Res: 282291</td>
+                            <td>
+                                <img
+                                    src="./images/home/mobile.png"
+                                    width="25px" height="25px"
+                                    alt="Mobile"
+                                    />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tamilnadu: 94420 10093, 94431 20292 Kerala: 9495152066</td>
+                            <td>
+                                <img
+                                    src="./images/home/phone.png"
+                                    width="25px" height="25px"
+                                    alt="Phone"
+                                    />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>email: wmel1974@gmail.com</td>
+                            <td>
+                                <img
+                                    src="./images/home/email.png"
+                                    width="25px" height="25px"
+                                    alt="Email"
+                                    />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>info@whitememorialcolleges</td>
+                        </tr>
+                        <tr>
+                            <td>whitememorialcolleges.com</td>
+                            <td>
+                                <img
+                                    src="./images/home/search.png"
+                                    width="25px" height="25px"
+                                    alt="Search"
+                                    />
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table>
+                        <tr>
+                            <th>HOME</th>
+                        </tr>
+                        <tr>
+                            <td>Chairman Message</td>
+                        </tr>
+                        <tr>
+                            <td>Founders Message</td>
+                        </tr>
+                        <tr>
+                            <td>Our Mission</td>
+                        </tr>
+                        <tr>
+                            <td>Our Vision</td>
+                        </tr>
+                        <tr>
+                            <td>Hostel Facilities</td>
+                        </tr>
+                        <tr>
+                            <td>Bus Facilities</td>
+                        </tr>
+                    </table>
+
+
+                    <table>
+                        <tr>
+                            <th>COURSES OFFERED</th>
+                        </tr>
+                        <tr>
+                            <td>B.Sc Nursing</td>
+                        </tr>
+                        <tr>
+                            <td>P.B.B.Sc Nursing</td>
+                        </tr>
+                        <tr>
+                            <td>DGNM</td>
+                        </tr>
+                    </table>
+
+                    <table>
+                        <tr>
+                            <th>HOSPITAL</th>
+                        </tr>
+                        <tr>
+                            <td>What we provide</td>
+                        </tr>
+                        <tr>
+                            <td>What we have</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="ellipse">
+                    <img
+                        src="./images/home/ellipse.png"
+                        alt="Img3"
+                        width="40px"
+                        height="20px"
+                        />
+                </div>
+
+                <div id="copyright">
+                    <span> Copyright © <script>document.write(new Date().getFullYear())</script>. Design by Dr.S.Shabin </span>
+                </div>
             </div>
         </div>
     </body>

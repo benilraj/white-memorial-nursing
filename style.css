@@ -45,7 +45,7 @@ body {
     align-items: center;
 }
 
-#nav_bar > i {
+#menu_icon {
     padding: 0px 3px 0px 3px;
     font-size: 50px;
     color: white;
@@ -53,11 +53,21 @@ body {
     cursor: pointer;
 }
 
+.show_hide {
+    display: none !important;
+}
+
 @media screen and (max-width: 992px) {
-    #nav_bar > a {
-        display: none;
+    #header {
+        flex-direction: column;
     }
-    #nav_bar > i {
+    #nav_bar {
+        flex-direction: column;
+    }
+    #nav_bar > a {
+        border: none !important;
+    }
+    #menu_icon {
         display: inline;
     }
 
@@ -366,7 +376,6 @@ body {
 
 .pr_img > img {
     width: 120px;
-    height: 120px;
 }
 
 #provide_content {
@@ -381,3 +390,131 @@ body {
 }
 
 /* footer */
+#contact_us {
+    padding: 20px 40px 0px 40px;
+
+    background-image: url("./images/home/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+@media screen and (max-width: 992px) {
+    #contact_container {
+        flex-direction: column !important;
+        gap: 20px;
+    }
+}
+
+#contact_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#contact_container th {
+    color: #b9a87d;
+    text-align: left;
+    font-size: larger;
+}
+
+#contact_container td {
+    color: white;
+    text-align: left;
+}
+
+/* gallery */
+
+#gallery {
+    padding: 20px 40px 20px 40px;
+    background-color: #e3e7ea;
+}
+
+#gallery_heading {
+    font-size: 35px;
+    font-weight: 500;
+    text-align: right;
+}
+
+#gallery_heading > span {
+    border-bottom: 3px solid black;
+}
+
+#image_bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+#image_bar img {
+    width: 400px;
+    height: 300px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#image_bar img:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+#gallery_content {
+    padding: 10px;
+}
+
+@media screen and (max-width: 992px) {
+    #image_bar {
+        flex-direction: column !important;
+        gap: 20px;
+    }
+}
+
+#gallery_car {
+    padding-bottom: 30px;
+    display: flex;
+}
+
+#gall_car_main_img > img {
+    width: 500px;
+    height: 400px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#car_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#car_heading {
+    padding-top: 50px;
+    color: #b9a87d;
+    font-size: x-large;
+}
+
+#car_desc {
+    font-size: medium;
+    font-style: italic;
+}
+
+@media screen and (max-width: 992px) {
+    #gallery_car {
+        flex-direction: column;
+    }
+}
+
+/* copyright */
+
+#copyright {
+    text-align: center;
+}
+
+#copyright > span {
+    padding: 0px 30px 0px 30px;
+    background-color: white;
+}
+
+#ellipse {
+    text-align: right;
+    padding-right: 40px;
+}
