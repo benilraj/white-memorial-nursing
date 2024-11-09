@@ -4,7 +4,7 @@
         <title>White Memorial College Of Nursing</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/png" href="./images/home/logo.png" />
+        <link rel="icon" type="image/png" href="./images/common/logo.png" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,47 +12,16 @@
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <link rel="stylesheet" href="./style.css" />
-
-        <script>
-          function toggleNavbar(){
-            var nav = document.getElementById("nav_bar");
-            nav.classList.toggle("show_hide");
-          }
-
-          window.onresize = resizeFn;
-          resizeFn();
-
-          function resizeFn(){
-            var nav = document.getElementById("nav_bar");
-            if( nav !== null){
-              if(window.innerWidth < 992){
-                nav.classList.add("show_hide");
-              } else {
-                nav.classList.remove("show_hide");
-              }
-            }
-          }
-
-          document.addEventListener("DOMContentLoaded", function() {
-            if(window.innerWidth < 992){
-              var nav = document.getElementById("nav_bar");
-              if(nav !== null){
-                nav.classList.add("show_hide");
-              }
-            }
-          });
-
-        </script>
+        <link rel="stylesheet" href="./style/home/style.css" />
+        <link rel="stylesheet" href="./style/common/style.css" />
+        <script src="./js/common/script.js"></script>
 
     </head>
     <body>
         <div id="main_container">
             <div id="header">
                 <div id="logo_and_name">
-                    <img id="logo" src="./images/home/logo.png" alt="Logo" />
+                    <img id="logo" src="./images/common/logo.png" alt="Logo" />
                     <div>
                         <div id="clg_name">
                             WHITE MEMORIAL COLLEGE OF NURSING
@@ -60,7 +29,7 @@
                         <div id="clg_addr">Attoor, Veeyanoor Po - 629177</div>
                     </div>
                     <div id="menu_icon" onclick="toggleNavbar()" >
-                        <i class="fa fa-bars"></i>
+                        <span>☰</span>
                     </div>
                 </div>
                 <div id="nav_bar">
@@ -216,7 +185,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <div id="provide">
@@ -290,7 +258,7 @@
                             <td>Attoor, Veeyanoor Post, Kanyakumari Dist, Tamil Nadu</td>
                             <td>
                                 <img
-                                    src="./images/home/location.png"
+                                    src="./images/common/location.png"
                                     width="25px" height="25px"
                                     alt="Location"
                                     />
@@ -300,7 +268,7 @@
                             <td>Tel: 04651-282292, 282282, College: 295399, Res: 282291</td>
                             <td>
                                 <img
-                                    src="./images/home/mobile.png"
+                                    src="./images/common/mobile.png"
                                     width="25px" height="25px"
                                     alt="Mobile"
                                     />
@@ -310,7 +278,7 @@
                             <td>Tamilnadu: 94420 10093, 94431 20292 Kerala: 9495152066</td>
                             <td>
                                 <img
-                                    src="./images/home/phone.png"
+                                    src="./images/common/phone.png"
                                     width="25px" height="25px"
                                     alt="Phone"
                                     />
@@ -320,7 +288,7 @@
                             <td>email: wmel1974@gmail.com</td>
                             <td>
                                 <img
-                                    src="./images/home/email.png"
+                                    src="./images/common/email.png"
                                     width="25px" height="25px"
                                     alt="Email"
                                     />
@@ -333,7 +301,7 @@
                             <td>whitememorialcolleges.com</td>
                             <td>
                                 <img
-                                    src="./images/home/search.png"
+                                    src="./images/common/search.png"
                                     width="25px" height="25px"
                                     alt="Search"
                                     />
@@ -396,7 +364,7 @@
 
                 <div id="ellipse">
                     <img
-                        src="./images/home/ellipse.png"
+                        src="./images/common/ellipse.png"
                         alt="Img3"
                         width="40px"
                         height="20px"

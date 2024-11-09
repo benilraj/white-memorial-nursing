@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+body {
+    margin: 0;
+}
+
+#main_container {
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    background-color: #122d34;
+    padding: 20px 10px 20px 20px;
+    display: flex;
+}
+
+#logo_and_name {
+    flex-grow: 4;
+    display: flex;
+    gap: 15px;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+}
+
+#header #clg_name {
+    color: white;
+    font-size: 35px;
+}
+
+#header #clg_addr {
+    color: white;
+    font-size: 20px;
+}
+
+#nav_bar {
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+}
+
+#menu_icon {
+    padding: 0px 3px 0px 3px;
+    font-size: 50px;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+
+.show_hide {
+    display: none !important;
+}
+
+@media screen and (max-width: 992px) {
+    #header {
+        flex-direction: column;
+    }
+    #nav_bar {
+        flex-direction: column;
+    }
+    #nav_bar > a {
+        border: none !important;
+    }
+    #menu_icon {
+        display: inline;
+    }
+
+    #header #clg_name {
+        font-size: 1.3em;
+    }
+
+    #header #clg_addr {
+        font-size: 10px;
+    }
+}
+
+#nav_bar > a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 15px 10px 15px;
+    border-right: 1px solid white;
+}
+
+#nav_bar > a:hover {
+    background-color: #b9a87d;
+}
+
+#nav_bar > a:last-child {
+    border: none;
+}
+
+/* footer */
+#contact_us {
+    padding: 20px 40px 0px 40px;
+
+    background-image: url("../../images/common/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+@media screen and (max-width: 992px) {
+    #contact_container {
+        flex-direction: column !important;
+        gap: 20px;
+    }
+}
+
+#contact_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#contact_container th {
+    color: #b9a87d;
+    text-align: left;
+    font-size: larger;
+}
+
+#contact_container td {
+    color: white;
+    text-align: left;
+}
+
+/* copyright */
+
+#copyright {
+    text-align: center;
+}
+
+#copyright > span {
+    padding: 0px 30px 0px 30px;
+    background-color: white;
+}
+
+#ellipse {
+    text-align: right;
+    padding-right: 40px;
+}
