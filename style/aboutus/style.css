@@ -1,0 +1,166 @@
+h1,
+h2 {
+    font-weight: 100;
+    margin: 0;
+}
+
+#about_bar {
+    background-image: url("../../images/aboutus/bg.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    height: 500px;
+    width: 100%;
+}
+
+#about_bar {
+    padding: 50px 0px 50px 0px;
+    color: white;
+    text-align: center;
+}
+
+#about_bar > img {
+    width: 100px;
+    height: 100px;
+}
+
+#about_bar > h1 {
+    font-size: 50px;
+}
+
+#about_bar > p {
+    font-size: 15px;
+}
+
+/* ----------- */
+
+#vision_bar {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+#vision_bar > img {
+    width: 50px;
+    height: 70px;
+}
+
+#vision_bar > p {
+    font-size: 18px;
+    padding: 0px 80px 0px 80px;
+}
+
+#vision_bar_dr_img {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+@media screen and (max-width: 992px) {
+    #vision_bar_dr_img {
+        flex-direction: column;
+    }
+}
+
+#vision_bar_dr_img img {
+    width: 400px;
+    height: 300px;
+}
+
+#vision_bar_dr_img > p {
+    font-size: 17px;
+}
+
+#founder_name {
+    color: white;
+    background-color: #132c33;
+}
+
+#founder_desc {
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 40px;
+    letter-spacing: 1px;
+}
+
+/* ----------- */
+
+#vision_bar_chair_img {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row-reverse;
+
+    background-image: url("../../images/aboutus/bg2.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    color: white;
+    padding: 40px 0px 20px 0px;
+}
+
+@media screen and (max-width: 992px) {
+    #vision_bar_chair_img {
+        flex-direction: column;
+    }
+}
+
+#vision_bar_chair_img img {
+    width: 400px;
+    height: 300px;
+}
+
+#vision_bar_chair_img > p {
+    font-size: 17px;
+}
+
+#chairman_name {
+    font-size: 19px;
+}
+
+#chairman_desc {
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 40px;
+    letter-spacing: 1px;
+}
+
+/* ------ */
+
+#vision_bar_principal_img {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 0px 20px 0px;
+}
+
+@media screen and (max-width: 992px) {
+    #vision_bar_principal_img {
+        flex-direction: column;
+    }
+}
+
+#vision_bar_principal_img img {
+    width: 400px;
+    height: 300px;
+}
+
+#vision_bar_principal_img > p {
+    font-size: 17px;
+}
+
+#principal_name {
+    font-size: 19px;
+    color: white;
+    background-color: #132c33;
+}
+
+#principal_desc {
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 40px;
+    letter-spacing: 1px;
+    text-align: justify;
+}
