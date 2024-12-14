@@ -1,0 +1,103 @@
+#main {
+    background-image: url("../../images/coursesoffered/nurse.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 750px;
+}
+
+.tag {
+    color: white;
+    background-color: black;
+    padding: 2px 5px 2px 5px;
+}
+
+.tag a {
+    text-decoration: none;
+    color: white;
+}
+
+#main #main_container {
+    padding: 50px 30px 10px 30px;
+}
+
+#main #description {
+    width: 600px;
+}
+
+#main .line {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.line span {
+    color: #b9a87d;
+}
+
+#main #description {
+    padding: 30px 0 0 0;
+}
+
+#courses {
+    padding: 20px 10px 20px 30px;
+}
+
+#course_heading {
+    font-size: 35px;
+    font-weight: 500;
+}
+
+#course_heading > span {
+    border-bottom: 3px solid black;
+}
+
+.card {
+    box-shadow: 0px 0px 7px 5px rgba(0, 0, 0, 0.49);
+    padding: 50px 50px 50px 50px;
+    margin-bottom: 20px;
+    position: relative;
+    border-bottom: 10px solid black;
+    background-color: white;
+}
+
+.card > span {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.card_container {
+    padding-top: 30px;
+}
+
+.course_name {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.course_title {
+    font-size: small;
+}
+
+#avail_courses {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/* features */
+
+#features {
+    padding: 20px 50px 20px 50px;
+}
+
+#features_container {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: black;
+    color: white;
+}
+
+#features_container p {
+    margin-left: 15px;
+}
