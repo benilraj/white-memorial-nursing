@@ -141,6 +141,7 @@
 
 #right_side {
     grid-area: right;
+    justify-self: center;
 }
 
 #clinical_facilities {
