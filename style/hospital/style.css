@@ -1,0 +1,105 @@
+.img_container {
+    text-align: center;
+}
+
+.img_container > img {
+    width: 50px;
+}
+
+.wcu_card_container {
+    width: 450px;
+}
+
+.wcu_card_title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.wcu_card_description {
+    font-size: 14px;
+    text-align: center;
+}
+
+#banner {
+    background-image: url("../../images/hospital/nurse.png"),
+        url("../../images/hospital/pattern.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:
+        right bottom,
+        -550px;
+    background-size: 750px;
+
+    padding-top: 80px;
+    padding-bottom: 250px;
+}
+
+#banner_title {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+#address {
+}
+
+#banner_description {
+    max-width: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+/* why choose us */
+
+#why_choose_us {
+    background-image: url("../../images/hospital/doctor.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    color: white;
+
+    padding-bottom: 100px;
+    padding-top: 30px;
+}
+
+#wcu_heading {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#wcu_container {
+    display: grid;
+    gap: 25px;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#wcu_subheading {
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+}
+
+#operation {
+    grid-column: 2;
+    grid-row: 1 / 2;
+}
+
+#labour {
+    grid-column: 5;
+    grid-row: 1 / 2;
+}
+
+#scan {
+    grid-column: 1 / span 3;
+    grid-row: 3;
+}
+
+#plus {
+    grid-column: 4 / span 3;
+    grid-row: 3;
+    justify-self: end;
+}
