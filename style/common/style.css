@@ -21,8 +21,8 @@
 body {
     margin: auto;
     max-width: 1920px;
-    border-left: 1px solid lightgray;
-    border-right: 1px solid lightgray;
+    /* border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray; */
 }
 
 #main_container {

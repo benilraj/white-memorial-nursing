@@ -15,7 +15,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <link rel="icon" type="image/png" href="./images/common/logo.png" />
-        <link rel="stylesheet" href="./style/home/style.css" />
+        <link rel="stylesheet" href="./style/gallery/style.css" />
         <link rel="stylesheet" href="./style/common/style.css" />
         <script src="./js/common/script.js"></script>
     </head>
@@ -41,6 +41,121 @@
                     <a href="./gallery.html">Gallery</a>
                     <a href="./about-us.html">About&nbsp;us</a>
                     <a href="./contact-us.html">Contact&nbsp;us</a>
+                </div>
+            </div>
+
+            <div id="banner">
+                <div id="banner_container">
+                    <div class="text_center">
+                        <img src="./images/gallery/d.png" width="75px" />
+                    </div>
+                    <h1 class="text_center">Capture the Moment</h1>
+                    <h1 class="text_center">that captivate your Heart</h1>
+                    <div style="display: flex; justify-content: center">
+                        <input
+                            type="text"
+                            size="100"
+                            placeholder="Try any keywords"
+                            id="keyword"
+                            onchange="filter_by_keyword();"
+                        />
+                        <input
+                            type="button"
+                            value="Search"
+                            size="50"
+                            id="search_button"
+                            onclick="filter_by_keyword();"
+                        />
+                    </div>
+                </div>
+                <div id="gallery_heading">Gallery</div>
+            </div>
+
+            <div id="gallery" class="default_container">
+                <div id="gallery_tag_container">
+                    <div onclick="filter_by_category('sports')">Sports Day</div>
+                    <span>|</span>
+                    <div>College Day</div>
+                    <span>|</span>
+                    <div onclick="filter_by_category('pongal')">
+                        Pongal Celebration
+                    </div>
+                    <span>|</span>
+                    <div>Freshers Day</div>
+                    <span>|</span>
+                    <div>Alumini</div>
+                    <span>|</span>
+                    <div>Nurses Day</div>
+                </div>
+                <div id="gallery_container">
+                    <div id="category_container">
+                        <div id="category_heading">categories</div>
+                        <div id="category_content">
+                            <div onclick="filter_by_category('pongal')">
+                                Pongal Celebration
+                            </div>
+                            <div onclick="filter_by_category('sports')">
+                                Sports Day
+                            </div>
+                            <div>College Day</div>
+                            <div>Fresher's Day</div>
+                            <div>Arts Day</div>
+                            <div>Onam Celebration</div>
+                            <div>Christmas Day</div>
+                            <div>World Nurses Day</div>
+                            <div>Farewell day</div>
+                            <div>SNA</div>
+                            <div>Graduation Day</div>
+                            <div>Lamp Lighting</div>
+                        </div>
+                    </div>
+
+                    <div id="image_container" class="default_container">
+                        <img
+                            src="./images/gallery/gall1.jpg"
+                            category="freshers_day"
+                            description="freshers day celebration"
+                        />
+                        <img
+                            src="./images/gallery/gall2.jpg"
+                            category="pongal"
+                            description="pongal celebration"
+                        />
+                        <img
+                            src="./images/gallery/gall3.jpg"
+                            category="college_day"
+                            description="college day celebration"
+                        />
+                        <img
+                            src="./images/gallery/gall4.jpg"
+                            category="college_day"
+                            description="college day celebration"
+                        />
+                        <img
+                            src="./images/gallery/gall5.jpg"
+                            category="christmas_day"
+                            description="christmas day celebration"
+                        />
+                        <img
+                            src="./images/gallery/gall6.jpg"
+                            category="nurses_day"
+                            description="nurses day celebration"
+                        />
+                        <img src="./images/gallery/gall7.jpg" />
+                        <img src="./images/gallery/gall8.jpg" />
+                        <img src="./images/gallery/gall9.jpg" />
+                        <img src="./images/gallery/gall10.jpg" />
+                        <img src="./images/gallery/gall11.jpg" />
+                        <img src="./images/gallery/gall12.jpg" />
+                    </div>
+                </div>
+            </div>
+
+            <div id="carousel" class="default_container">
+                <div><img src="./images/gallery/e.png" width="700px" /></div>
+                <div id="carousel_text">
+                    <div>"We do not remember</div>
+                    <div>days; we remember moments."</div>
                 </div>
             </div>
 
@@ -191,5 +306,55 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            var backup = document.getElementById("image_container").innerHTML;
+
+            function filter_by_keyword() {
+                document.getElementById("image_container").innerHTML = backup;
+                let keyword = document.getElementById("keyword").value;
+                console.log("filter by keyword " + keyword);
+                if (keyword === "") {
+                    console.log("Resetting..");
+                    return;
+                }
+
+                let op = "";
+                var content = document.getElementById("image_container");
+                for (let i = 0; i < content.children.length; i++) {
+                    let description =
+                        content.children[i].getAttribute("description");
+                    if (description !== null && description.includes(keyword)) {
+                        console.log("match");
+                        op += content.children[i].outerHTML;
+                    }
+                }
+                console.log(op);
+                if (op === "") {
+                    op = "<div>No Match Found</div>";
+                }
+                document.getElementById("image_container").innerHTML = op;
+            }
+
+            function filter_by_category(category) {
+                console.log("filter by category " + category);
+                document.getElementById("image_container").innerHTML = backup;
+                let op = "";
+                var content = document.getElementById("image_container");
+                for (let i = 0; i < content.children.length; i++) {
+                    let description =
+                        content.children[i].getAttribute("category");
+                    if (description === category) {
+                        console.log("match");
+                        op += content.children[i].outerHTML;
+                    }
+                }
+                console.log(op);
+                if (op === "") {
+                    op = "<div>No Match Found</div>";
+                }
+                document.getElementById("image_container").innerHTML = op;
+            }
+        </script>
     </body>
 </html>

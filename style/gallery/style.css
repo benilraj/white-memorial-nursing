@@ -1,0 +1,128 @@
+.text_center {
+    text-align: center;
+}
+
+#banner {
+    background-image: url("../../images/gallery/ed.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    color: white;
+    padding: 150px 0px 0px 0px;
+}
+
+#banner_container > h1 {
+    font-size: 50px;
+    font-weight: 500;
+    margin: 0;
+}
+
+#banner_container input {
+    margin-top: 50px;
+    height: 50px;
+}
+
+#search_button {
+    color: white;
+    background-color: #193c43;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    font-size: 18px;
+}
+
+#gallery_heading {
+    padding-left: 20px;
+    font-size: 35px;
+    padding-top: 150px;
+}
+
+#gallery_tag_container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 280px;
+    display: flex;
+    gap: 10px;
+}
+
+#gallery_tag_container > div {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#gallery_tag_container > div:hover {
+    background-color: #193c43;
+    color: white;
+    cursor: pointer;
+}
+
+#category_container {
+    width: 280px;
+}
+
+#category_heading {
+    background-color: #193c43;
+    color: white;
+}
+
+#gallery {
+    padding-left: 0;
+    min-height: 500px;
+}
+
+#gallery_container {
+    display: flex;
+}
+
+#image_container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 25px;
+    row-gap: 25px;
+}
+
+#image_container > img {
+    width: 300px;
+    cursor: pointer;
+}
+
+#image_container > img:hover {
+    scale: 1.1;
+}
+
+#category_heading {
+    font-size: 25px;
+    padding: 10px;
+}
+
+#category_content {
+    font-size: 18px;
+    padding-left: 50px;
+}
+
+#category_content > div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#category_content div:hover {
+    background-color: #193c43;
+    color: white;
+}
+
+/* carousel */
+
+#carousel {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#carousel_text {
+    font-size: 18px;
+    font-style: italic;
+}

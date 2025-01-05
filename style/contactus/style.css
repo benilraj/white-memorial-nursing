@@ -84,3 +84,16 @@
     font-size: 25px;
     padding: 40px;
 }
+
+#submit_button {
+    background: linear-gradient(
+        210deg,
+        rgba(50, 157, 169, 1) 0%,
+        rgba(25, 60, 67, 1) 100%
+    );
+    color: white;
+    font-size: 20px;
+    border: none;
+    font-weight: 600;
+    padding: 5px 15px 5px 15px;
+}
