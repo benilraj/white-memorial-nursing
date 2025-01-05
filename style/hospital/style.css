@@ -20,6 +20,10 @@
     text-align: center;
 }
 
+.flex_container {
+    display: flex;
+}
+
 #banner {
     background-image: url("../../images/hospital/nurse.png"),
         url("../../images/hospital/pattern.png");
@@ -102,4 +106,121 @@
     grid-column: 4 / span 3;
     grid-row: 3;
     justify-self: end;
+}
+
+/* speciality */
+
+#speciality {
+    background-image: url("../../images/hospital/rectangle.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -375px;
+    background-size: 1000px;
+
+    height: 1200px;
+}
+
+#speciality_header {
+    font-size: 40px;
+    text-align: center;
+    margin: 20px;
+}
+
+#speciality_header > span {
+    color: #027382;
+}
+
+#speciality_description {
+    text-align: center;
+    font-size: 20px;
+    margin: 20px;
+}
+
+#speciality_list {
+    font-size: 30px;
+    color: white;
+    margin-top: 75px;
+    width: 50%;
+}
+
+#speciality_list_heading {
+    padding-left: 15px;
+}
+
+#speciality_list_content {
+    padding-left: 50px;
+}
+
+#speciality_details_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.speciality_details {
+    text-align: center;
+    font-size: 25px;
+    padding: 25px 0px 25px 0px;
+}
+
+/* what we have */
+
+#wwh_heading {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: right;
+}
+
+#wwh_heading > span {
+    color: #727272;
+}
+
+.blue_text {
+    color: #027382;
+}
+
+#wwh_content li {
+    list-style: none;
+    background-image: url("../../images/hospital/rect_bullet.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px;
+    padding: 15px 0 15px 35px;
+    font-size: 25px;
+}
+
+#wwh_container {
+    display: flex;
+}
+
+#wwh_images > div {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+/* what we provide  */
+
+#wwp_heading {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: right;
+}
+
+#wwp_heading > span {
+    color: #727272;
+}
+
+#what_we_provide {
+}
+
+#wwp_container {
+    display: flex;
+    align-items: center;
+}
+
+#wwp_container li {
+    list-style: none;
+    font-size: 25px;
+    padding: 8px;
 }
