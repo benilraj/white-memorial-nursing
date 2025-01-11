@@ -7,7 +7,7 @@
 }
 
 .wcu_card_container {
-    width: 450px;
+    max-width: 450px;
 }
 
 .wcu_card_title {
@@ -38,6 +38,19 @@
     padding-bottom: 250px;
 }
 
+@media screen and (max-width: 992px) {
+    #banner {
+        background-image: url("../../images/hospital/pattern.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: -550px;
+        background-size: 750px;
+
+        padding-top: 80px;
+        padding-bottom: 250px;
+    }
+}
+
 #banner_title {
     font-weight: bold;
     font-size: 50px;
@@ -65,6 +78,14 @@
 
     padding-bottom: 100px;
     padding-top: 30px;
+}
+
+@media screen and (max-width: 992px) {
+    #why_choose_us {
+        background-image: none;
+        color: black;
+        background-color: #e3e3e3;
+    }
 }
 
 #wcu_heading {
@@ -106,6 +127,28 @@
     grid-column: 4 / span 3;
     grid-row: 3;
     justify-self: end;
+}
+
+@media screen and (max-width: 992px) {
+    #operation {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #labour {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #scan {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    #plus {
+        grid-column: 1;
+        grid-row: 4;
+    }
 }
 
 /* speciality */
@@ -162,6 +205,9 @@
     text-align: center;
     font-size: 25px;
     padding: 25px 0px 25px 0px;
+}
+
+@media screen and (max-width: 992px) {
 }
 
 /* what we have */

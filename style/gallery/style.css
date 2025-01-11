@@ -81,6 +81,24 @@
     row-gap: 25px;
 }
 
+@media screen and (max-width: 992px) {
+    #image_container {
+        grid-template-columns: auto;
+    }
+
+    #image_container > img:hover {
+        scale: 1 !important;
+    }
+
+    #category_container {
+        display: none;
+    }
+
+    #gallery_tag_container {
+        margin-left: 0;
+    }
+}
+
 #image_container > img {
     width: 300px;
     cursor: pointer;
